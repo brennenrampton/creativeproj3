@@ -1,50 +1,28 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Tag Game</title>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-
-  <script src="scripts/app.js"></script>
-
-
+  <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+  <script src="app.js"></script>
+  <title>JS Bin</title>
 </head>
-<body ng-app="Game">
-
-  <ui-view></ui-view>
-
-  <script type="text/ng-template" id="#/home.html">
-    <form ng-submit="saveName()"
-      style="margin-top:30px;">
-      <h3>ENTER YOUR NAME: </h3>
-
-      <div class="form-group">
-        <input type="text"
-        class="form-control"
-        placeholder="NAME"
-        ng-model="formContent"></input>
-      </div>
-      <button type="submit" class="btn btn-primary">SAVE NAME</button>
-    </form>
-
-    <a href="#/game.html">Done</a>
+<body ng-app="News">
+  <a href="#/home">Home</a> 
+  <a href="#/game">game</a> 
+  <a href="#/score">score</a> 
+<ui-view></ui-view>
+  
+<script type="text/ng-template" id="/home.html">
+  <h1>Home</h1>
+</script>
+  <script type="text/ng-template" id="/game.html">
+    <h1>Game</h1>
   </script>
-
-  <script type="text/ng-template" id="#/game.html">
-    <script src="scripts/phaser.min.js"></script>
-	<script src="scripts/game_play.js"></script>
-	<script src="scripts/main.js"></script>
-
-	<a href="#/done.html">Done</a>
-  </script>
-
-  <script type="text/ng-template" id="#/done.html">
-    <div class = 'jumbotron'>
-    Congratulations {{person}}!!!
-    </div>
+  <script type="text/ng-template" id="/score.html">
+    <h1>Score</h1>
   </script>
 </body>
 </html>
