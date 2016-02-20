@@ -10,6 +10,6 @@ var Menu = {
 	},
 
 	startGame : function () {
-		this.state.start('Game_Play');
+		this.state.start('Game');
 	}
 };
