@@ -1,4 +1,4 @@
-angular.module('News', ['ui.router']).config([
+angular.module('Game', ['ui.router']).config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
