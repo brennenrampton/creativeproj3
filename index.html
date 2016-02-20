@@ -7,6 +7,15 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
   <script src="app.js"></script>
+  <title>HTML Tag Game</title>
+	<script src="scripts/phaser.min.js"></script>
+	<script src="scripts/game_play.js"></script>
+	<script src="scripts/main.js"></script>
+	<!--<script src="scripts/menu.js"></script>
+	<script src="scripts/game_play.js"></script>
+	<script src="scripts/game_over.js"></script>
+	<script src="scripts/main.js"></script>-->
+
   <title>JS Bin</title>
 </head>
 <body ng-app="News">
@@ -20,6 +29,8 @@
 </script>
   <script type="text/ng-template" id="/game.html">
     <h1>Game</h1>
+    <div id='phaser-game'>
+    </div>
   </script>
   <script type="text/ng-template" id="/score.html">
     <h1>Score</h1>
