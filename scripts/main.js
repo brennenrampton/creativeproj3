@@ -1,4 +1,4 @@
-var game
+var game;
 
 game = new Phaser.Game(600, 450, Phaser.AUTO, '');
 
