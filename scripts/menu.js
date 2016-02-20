@@ -2,6 +2,7 @@ var Menu = {
 
 	preload : function() {
 		game.load.image('start', 'images/start.png');
+		game.stage.backgroundColor = '#FFFFFF';
 	},
 
 	create : function () {
