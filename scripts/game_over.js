@@ -11,6 +11,6 @@ var Game_Over = {
 	}
 
 	startGame : function() {
-		this.state.start('Game_Play')
+		this.state.start('Game')
 	}
 }
