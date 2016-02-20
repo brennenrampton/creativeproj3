@@ -45,6 +45,22 @@ var Game = {
 
 	},
 
+	moveTags: function() {
+		var sign = Math.floor((Math.random() * 4));
+		if (sign === 0) {
+			movingPlatform.body.velocity.y = Math.floor((Math.random() * 100) + 51);
+			movingPlatform.body.velocity.x = Math.floor((Math.random() * 100) + 51);
+		} else if (sign === 1) {
+			movingPlatform.body.velocity.y = -(Math.floor((Math.random() * 100) + 51));
+			movingPlatform.body.velocity.x = -(Math.floor((Math.random() * 100) + 51));
+		} else if (sign === 2) {
+			movingPlatform.body.velocity.y = (Math.floor((Math.random() * 100) + 51));
+			movingPlatform.body.velocity.x = -(Math.floor((Math.random() * 100) + 51));
+		} else if (sign === 3) {
+			movingPlatform.body.velocity.y = -(Math.floor((Math.random() * 100) + 51));
+			movingPlatform.body.velocity.x = (Math.floor((Math.random() * 100) + 51));
+		}
+	},
 	
 	update: function() {
 
@@ -75,22 +91,7 @@ var Game = {
 		{
 		    player.body.velocity.y = -400;
 		}*/
-	},
-
-	moveTags: function() {
-		var sign = Math.floor((Math.random() * 4));
-		if (sign === 0) {
-			movingPlatform.body.velocity.y = Math.floor((Math.random() * 100) + 51);
-			movingPlatform.body.velocity.x = Math.floor((Math.random() * 100) + 51);
-		} else if (sign === 1) {
-			movingPlatform.body.velocity.y = -(Math.floor((Math.random() * 100) + 51));
-			movingPlatform.body.velocity.x = -(Math.floor((Math.random() * 100) + 51));
-		} else if (sign === 2) {
-			movingPlatform.body.velocity.y = (Math.floor((Math.random() * 100) + 51));
-			movingPlatform.body.velocity.x = -(Math.floor((Math.random() * 100) + 51));
-		} else if (sign === 3) {
-			movingPlatform.body.velocity.y = -(Math.floor((Math.random() * 100) + 51));
-			movingPlatform.body.velocity.x = (Math.floor((Math.random() * 100) + 51));
-		}
 	}
+
+	
 };
