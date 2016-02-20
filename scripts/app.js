@@ -17,14 +17,14 @@ angular.module('Game', ['ui.router']).config([
         controller: 'ScoreCtrl'
       });
     $urlRouterProvider.otherwise('home');
-}]);
+}])
 
 .controller('MainCtrl', ['$scope',function($scope){
 
-}]);
+}])
 .controller('GameCtrl', ['$scope',function($scope){
 	
-}]);
+}])
 .controller('ScoreCtrl', ['$scope',function($scope){
 	
 }]);
