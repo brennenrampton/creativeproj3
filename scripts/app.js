@@ -8,17 +8,17 @@ function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: '/home.html',
+      templateUrl: '#/home.html',
       controller: 'MainCtrl'
     })
     .state('game', {
       url: '/game',
-      templateUrl: '/game.html',
+      templateUrl: '#/game.html',
       controller: 'GameCtrl'
     })
     .state('done', {
       url: '/done',
-      templateUrl: '/done.html',
+      templateUrl: '#/done.html',
       controller: 'DoneCtrl'
     });
 
@@ -46,5 +46,5 @@ function($scope){
 function($scope){
   $scope.person = name;
 
-  
+
 }]);

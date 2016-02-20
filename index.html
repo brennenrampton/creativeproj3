@@ -16,7 +16,7 @@
 
   <ui-view></ui-view>
 
-  <script type="text/ng-template" id="/home.html">
+  <script type="text/ng-template" id="#/home.html">
     <form ng-submit="saveName()"
       style="margin-top:30px;">
       <h3>ENTER YOUR NAME: </h3>
@@ -30,18 +30,18 @@
       <button type="submit" class="btn btn-primary">SAVE NAME</button>
     </form>
 
-    <a href="/game.html">Done</a>
+    <a href="#/game.html">Done</a>
   </script>
 
-  <script type="text/ng-template" id="/game.html">
+  <script type="text/ng-template" id="#/game.html">
     <script src="scripts/phaser.min.js"></script>
 	<script src="scripts/game_play.js"></script>
 	<script src="scripts/main.js"></script>
 
-	<a href="/done.html">Done</a>
+	<a href="#/done.html">Done</a>
   </script>
 
-  <script type="text/ng-template" id="/done.html">
+  <script type="text/ng-template" id="#/done.html">
     <div class = 'jumbotron'>
     Congratulations {{person}}!!!
     </div>
