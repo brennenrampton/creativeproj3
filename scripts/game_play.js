@@ -1,5 +1,5 @@
 
-var player, platforms, cursors, jumpButton, count;
+var player, platforms, cursors, jumpButton, count, lasers, fireButton, laserTime, laser;
 
 
 var Game = {
@@ -12,8 +12,10 @@ var Game = {
 
 		game.load.image('player', 'images/angular.png');
 		game.load.image('platform', 'images/doctype.png');
+		game.load.image('laser', 'images/laser.png');
 
 		count = 100;
+		laserTime = 0;
 
 	},
 
@@ -28,6 +30,11 @@ var Game = {
 		game.physics.arcade.enable(player);
 		game.physics.arcade.enable(movingPlatform);
 
+		lasers = game.add.physicsGroup();
+		lasers.createMultiple(32, 'laser', false);
+		lasers.setAll('checkWorldBounds', true);
+		lasers.setAll('outOfBoundsKill', true);
+
 		movingPlatform.body.collideWorldBounds = true;
 		player.body.collideWorldBounds = true;
 		//player.body.gravity.y = 500;
@@ -41,7 +48,7 @@ var Game = {
 		tags.setAll('body.immovable', true);
 
 		cursors = game.input.keyboard.createCursorKeys();
-		jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+		fireButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
 	},
 
@@ -61,7 +68,26 @@ var Game = {
 			movingPlatform.body.velocity.x = (Math.floor((Math.random() * 100) + 51));
 		}
 	},
-	
+
+	fireLaser: function(){
+		if (game.time.time > laserTime)
+    {
+        laser = lasers.getFirstExists(false);
+
+        if (laser)
+        {
+            laser.reset(player.x + 6, player.y - 12);
+            laser.body.velocity.y = -600;
+            laserTime = game.time.time + 100;
+        }
+    }
+	},
+
+	collisionHandler : function(bullet, tag) {
+		bullet.kill();
+		tag.kill();
+	},
+
 	update: function() {
 
 		game.physics.arcade.collide(player, tags);
@@ -69,7 +95,7 @@ var Game = {
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
 
-
+		game.physics.arcade.overlap(bullets, tags, collisionHandler, null, this);
 
 		if (cursors.left.isDown) {
 			player.body.velocity.x = -250;
@@ -87,6 +113,10 @@ var Game = {
 			this.moveTags();
 		}
 		count++;
+		if (fireButton.isDown)
+    {
+        fireLaser();
+    }
 		/*if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down))
 		{
 		    player.body.velocity.y = -400;
