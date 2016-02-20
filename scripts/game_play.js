@@ -83,8 +83,8 @@ var Game = {
     }
 	},
 
-	collisionHandler : function(bullet, tag) {
-		bullet.kill();
+	collisionHandler : function(laser, tag) {
+		laser.kill();
 		tag.kill();
 	},
 
@@ -95,7 +95,7 @@ var Game = {
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
 
-		game.physics.arcade.overlap(bullets, tags, collisionHandler, null, this);
+		game.physics.arcade.overlap(lasers, tags, collisionHandler, null, this);
 
 		if (cursors.left.isDown) {
 			player.body.velocity.x = -250;
