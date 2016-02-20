@@ -6,7 +6,7 @@ var jumpButton;
 var count = 100;
 
 
-var Game_Play = {
+var Game = {
 
 	preload: function() {
 
