@@ -1,9 +1,5 @@
 
-var player;
-var platforms;
-var cursors;
-var jumpButton;
-var count = 100;
+var player, platforms, cursors, jumpButton, count;
 
 
 var Game = {
@@ -16,6 +12,8 @@ var Game = {
 
 		game.load.image('player', 'images/angular.png');
 		game.load.image('platform', 'images/doctype.png');
+
+		count = 100;
 
 	},
 
