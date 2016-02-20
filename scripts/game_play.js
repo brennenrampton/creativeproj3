@@ -46,7 +46,7 @@ var Game = {
 	},
 
 	
-	update: funciton() {
+	update: function() {
 
 		game.physics.arcade.collide(player, tags);
 
