@@ -68,7 +68,7 @@ var Game = {
 		}
 
 		if (count % 50 === 0) {
-			moveTags();
+			this.moveTags();
 		}
 		count++;
 		/*if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down))
