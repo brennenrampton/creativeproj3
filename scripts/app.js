@@ -10,11 +10,21 @@ angular.module('News', ['ui.router']).config([
       }).state('game', {
         url: '/game',
         templateUrl: '/game.html',
-        controller: 'PostCtrl'
+        controller: 'GameCtrl'
       }).state('score', {
         url: '/score',
         templateUrl: '/score.html',
-        controller: 'PostCtrl'
+        controller: 'ScoreCtrl'
       });
     $urlRouterProvider.otherwise('home');
+
+.controller('MainCtrl', ['$scope',function($scope){
+
+}])
+.controller('GameCtrl', ['$scope',function($scope){
+	
+}])
+.controller('ScoreCtrl', ['$scope',function($scope){
+	
+}])
 }]);
