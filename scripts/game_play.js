@@ -51,6 +51,11 @@ var Game = {
 		fireButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
 	},
+	
+	collisionHandler : function(laser, tag) {
+		laser.kill();
+		tag.kill();
+	},
 
 	moveTags: function() {
 		var sign = Math.floor((Math.random() * 4));
@@ -70,7 +75,7 @@ var Game = {
 	},
 
 	fireLaser: function(){
-		if (game.time.time > laserTime)
+	if (game.time.time > laserTime)
     {
         laser = lasers.getFirstExists(false);
 
@@ -83,10 +88,7 @@ var Game = {
     }
 	},
 
-	collisionHandler : function(laser, tag) {
-		laser.kill();
-		tag.kill();
-	},
+	
 
 	update: function() {
 
@@ -113,14 +115,9 @@ var Game = {
 			this.moveTags();
 		}
 		count++;
-		if (fireButton.isDown)
-    {
-        fireLaser();
-    }
-		/*if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down))
-		{
-		    player.body.velocity.y = -400;
-		}*/
+		if (fireButton.isDown){
+        	fireLaser();
+    	}
 	}
 
 	
