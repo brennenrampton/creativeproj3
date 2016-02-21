@@ -116,7 +116,7 @@ var Game = {
 		}
 		count++;
 		if (fireButton.isDown){
-        	fireLaser();
+        	this.fireLaser();
     	}
 	}
 
