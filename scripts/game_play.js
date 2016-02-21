@@ -97,7 +97,7 @@ var Game = {
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
 
-		game.physics.arcade.overlap(lasers, tags, this.collisionHandler);
+		game.physics.arcade.collide(lasers, tags, this.collisionHandler);
 
 		if (cursors.left.isDown) {
 			player.body.velocity.x = -250;
