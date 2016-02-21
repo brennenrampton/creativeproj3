@@ -81,7 +81,7 @@ var Game = {
 
         if (laser)
         {
-            laser.reset(player.x + 45, player.y - 13);
+            laser.reset(player.x + 16, player.y - 13);
             laser.body.velocity.y = -600;
             laserTime = game.time.time + 100;
         }
