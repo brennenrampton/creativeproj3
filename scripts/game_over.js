@@ -6,11 +6,11 @@ var Game_Over = {
 	}
 
 	create : function() {
-		this.add.button(0, 0, 'again', this.startGame, this)
+		this.add.button(0, 0, 'again', this.startGame, this);
 
 	}
 
 	startGame : function() {
-		this.state.start('Game')
+		this.state.start('Game');
 	}
 }
