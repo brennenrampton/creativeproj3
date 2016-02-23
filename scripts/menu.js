@@ -6,7 +6,7 @@ var Menu = {
 	},
 
 	create : function () {
-		this.add.button(0, 0, 'start', this.startGame, this);
+		this.add.button(246, 161, 'start', this.startGame, this);
 	},
 
 	startGame : function () {
