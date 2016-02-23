@@ -287,6 +287,7 @@ var Game = {
 		laser.kill();
 	},
 
+/*
 	moveTags: function() {
 		var sign = Math.floor((Math.random() * 4));
 		if (sign === 0) {
@@ -303,6 +304,7 @@ var Game = {
 			movingPlatform.body.velocity.x = (Math.floor((Math.random() * 100) + 51));
 		}
 	},
+	*/
 
 	fireLaser: function(){
 	if (game.time.time > laserTime)
@@ -321,10 +323,12 @@ var Game = {
 	
 	update: function() {
 
+		/*
 		for(var i = 0; i < tags.length; i++)
 		{
 			game.physics.arcade.collide(player, tags[i]);
 		}
+		*/
 
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
@@ -355,11 +359,12 @@ var Game = {
 		} else if (cursors.down.isDown) {
 			player.body.velocity.y = 250;
 		}
-
+		/*
 		if (count % 50 === 0) {
 			this.moveTags();
 		}
 		count++;
+		*/
 		if (fireButton.isDown){
         	this.fireLaser();
     	}
