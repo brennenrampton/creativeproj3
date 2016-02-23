@@ -6,7 +6,7 @@ var Game_Over = {
 	},
 
 	create : function() {
-		this.add.button(0, 0, 'again', this.startGame, this);
+		this.add.button(246, 161, 'again', this.startGame, this);
 
 	},
 
