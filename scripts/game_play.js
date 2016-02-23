@@ -59,17 +59,29 @@ var Game = {
 		game.physics.arcade.enable(doctype);
 		console.log("doctype");
 		game.physics.arcade.enable(html);
+		console.log("html");
 		game.physics.arcade.enable(head);
+		console.log("head");
 		game.physics.arcade.enable(title);
+		console.log("title");
 		game.physics.arcade.enable(html_tag_game);
+		console.log("html_tag_game");
 		game.physics.arcade.enable(slash_title);
+		console.log("slash_title");
 		game.physics.arcade.enable(slash_head);
+		console.log("slash_head");
 		game.physics.arcade.enable(bodyt);
+		console.log("bodyt");
 		game.physics.arcade.enable(p);
+		console.log("p");
 		game.physics.arcade.enable(congratulations);
+		console.log("congratulations");
 		game.physics.arcade.enable(slash_p);
+		console.log("slash_p");
 		game.physics.arcade.enable(slash_body);
+		console.log("slash_body");
 		game.physics.arcade.enable(slash_html);
+		console.log("slash_html");
 
 		console.log("physiced the sprites (is that a word?)");
 
