@@ -13,4 +13,4 @@ var Game_Over = {
 	startGame : function() {
 		this.state.start('Game');
 	}
-}
+};
