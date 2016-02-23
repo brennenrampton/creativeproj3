@@ -52,6 +52,7 @@ var Game = {
 		p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'p');
 		congratulations = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'congratulations');
 		slash_p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_p');
+		slash_body = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_body');
 		slash_html = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_html');
 
 		console.log("initialized sprites");
