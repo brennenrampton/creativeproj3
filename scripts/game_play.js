@@ -57,6 +57,7 @@ var Game = {
 		console.log("initialized sprites");
 
 		game.physics.arcade.enable(doctype);
+		console.log("doctype");
 		game.physics.arcade.enable(html);
 		game.physics.arcade.enable(head);
 		game.physics.arcade.enable(title);
