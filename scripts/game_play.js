@@ -30,7 +30,7 @@ var Game = {
 		laserTime = 0;
 		tag_names = ['doctype', 'html', 'head', 'title', 'html_tag_game', 'slash_title', 'slash_head', 'body', 'p', 'congratulations', 'slash_p', 'slash_body', 'slash_html'];
 		current_tag = 0;
-		tags = [];
+		tags = new Array();
 
 	},
 
