@@ -1,5 +1,5 @@
 
-var player, platforms, cursors, jumpButton, count, lasers, fireButton, laserTime, laser, tag_names, current_tag, tags;
+var player, platforms, cursors, jumpButton, count, lasers, fireButton, laserTime, laser, tag_names, current_tag, tags, doctype, html, head, title, html_tag_game, slash_title, slash_head, body, p, congratulations, slash_p, slash_body, slash_html;
 
 
 var Game = {
@@ -39,15 +39,108 @@ var Game = {
 	create: function() {
 
 		player = game.add.sprite(100, 200, 'player');
+		doctype = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'doctype');
+		html = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'html');
+		head = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'head');
+		title = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'title');
+		html_tag_game = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'html_tag_game');
+		slash_title = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_title');
+		slash_head = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_head');
+		body = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'body');
+		p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'p');
+		congratulations = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'congratulations');
+		slash_p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_p');
+		slash_html = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_html');
 
-		for(var i = 0; i < tag_names.length; i++)
+		game.physics.arcade.enable(doctype);
+		game.physics.arcade.enable(html);
+		game.physics.arcade.enable(head);
+		game.physics.arcade.enable(title);
+		game.physics.arcade.enable(html_tag_game);
+		game.physics.arcade.enable(slash_title);
+		game.physics.arcade.enable(slash_head);
+		game.physics.arcade.enable(body);
+		game.physics.arcade.enable(p);
+		game.physics.arcade.enable(congratulations);
+		game.physics.arcade.enable(slash_p);
+		game.physics.arcade.enable(slash_body);
+		game.physics.arcade.enable(slash_html);
+
+		doctype.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		doctype.set('body.collideWorldBounds', true);
+		doctype.set('body.bounce.x', 1);
+		doctype.set('body.bounce.y', 1);
+
+		html.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		html.set('body.collideWorldBounds', true);
+		html.set('body.bounce.x', 1);
+		html.set('body.bounce.y', 1);
+
+		head.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		head.set('body.collideWorldBounds', true);
+		head.set('body.bounce.x', 1);
+		head.set('body.bounce.y', 1);
+
+		title.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		title.set('body.collideWorldBounds', true);
+		title.set('body.bounce.x', 1);
+		title.set('body.bounce.y', 1);
+
+		html_tag_game.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		html_tag_game.set('body.collideWorldBounds', true);
+		html_tag_game.set('body.bounce.x', 1);
+		html_tag_game.set('body.bounce.y', 1);
+
+		slash_title.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		slash_title.set('body.collideWorldBounds', true);
+		slash_title.set('body.bounce.x', 1);
+		slash_title.set('body.bounce.y', 1);
+
+		slash_head.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		slash_head.set('body.collideWorldBounds', true);
+		slash_head.set('body.bounce.x', 1);
+		slash_head.set('body.bounce.y', 1);
+
+		body.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		body.set('body.collideWorldBounds', true);
+		body.set('body.bounce.x', 1);
+		body.set('body.bounce.y', 1);
+
+		p.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		p.set('body.collideWorldBounds', true);
+		p.set('body.bounce.x', 1);
+		p.set('body.bounce.y', 1);
+
+		congratulations.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		congratulations.set('body.collideWorldBounds', true);
+		congratulations.set('body.bounce.x', 1);
+		congratulations.set('body.bounce.y', 1);
+
+		slash_p.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		slash_p.set('body.collideWorldBounds', true);
+		slash_p.set('body.bounce.x', 1);
+		slash_p.set('body.bounce.y', 1);
+
+		slash_body.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		slash_body.set('body.collideWorldBounds', true);
+		slash_body.set('body.bounce.x', 1);
+		slash_body.set('body.bounce.y', 1);
+
+		slash_html.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		slash_html.set('body.collideWorldBounds', true);
+		slash_html.set('body.bounce.x', 1);
+		slash_html.set('body.bounce.y', 1);
+
+
+		/*for(var i = 0; i < tag_names.length; i++)
 		{
 			tags.push(game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), tag_names[i]));
-			tags[i].set('body.velocity', game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+			s.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
 			tags[i].set('body.collideWorldBounds', true);
 			tags[i].set('body.bounce.x', 1);
 			tags[i].set('body.bounce.y', 1);
 		}
+		*/
 
 		//movingPlatform = game.add.sprite(0, 0, "platform");
 
@@ -236,19 +329,19 @@ var Game = {
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
 
-		game.physics.arcade.collide(lasers, tags[0], this.collisionHandler0);
-		game.physics.arcade.collide(lasers, tags[1], this.collisionHandler1);
-		game.physics.arcade.collide(lasers, tags[2], this.collisionHandler2);
-		game.physics.arcade.collide(lasers, tags[3], this.collisionHandler3);
-		game.physics.arcade.collide(lasers, tags[4], this.collisionHandler4);
-		game.physics.arcade.collide(lasers, tags[5], this.collisionHandler5);
-		game.physics.arcade.collide(lasers, tags[6], this.collisionHandler6);
-		game.physics.arcade.collide(lasers, tags[7], this.collisionHandler7);
-		game.physics.arcade.collide(lasers, tags[8], this.collisionHandler8);
-		game.physics.arcade.collide(lasers, tags[9], this.collisionHandler9);
-		game.physics.arcade.collide(lasers, tags[10], this.collisionHandler10);
-		game.physics.arcade.collide(lasers, tags[11], this.collisionHandler11);
-		game.physics.arcade.collide(lasers, tags[12], this.collisionHandler12);
+		game.physics.arcade.collide(lasers, doctype, this.collisionHandler0);
+		game.physics.arcade.collide(lasers, html, this.collisionHandler1);
+		game.physics.arcade.collide(lasers, head, this.collisionHandler2);
+		game.physics.arcade.collide(lasers, title, this.collisionHandler3);
+		game.physics.arcade.collide(lasers, html_tag_game, this.collisionHandler4);
+		game.physics.arcade.collide(lasers, slash_title, this.collisionHandler5);
+		game.physics.arcade.collide(lasers, slash_head, this.collisionHandler6);
+		game.physics.arcade.collide(lasers, body, this.collisionHandler7);
+		game.physics.arcade.collide(lasers, p, this.collisionHandler8);
+		game.physics.arcade.collide(lasers, congratulations, this.collisionHandler9);
+		game.physics.arcade.collide(lasers, slash_p, this.collisionHandler10);
+		game.physics.arcade.collide(lasers, slash_body, this.collisionHandler11);
+		game.physics.arcade.collide(lasers, slash_html, this.collisionHandler12);
 
 
 		if (cursors.left.isDown) {
