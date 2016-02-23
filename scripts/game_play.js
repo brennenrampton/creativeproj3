@@ -41,7 +41,7 @@ var Game = {
 
 		for(var i = 0; i < tag_names.length; i++)
 		{
-			tags.push(game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), tag_names[i]);
+			tags.push(game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), tag_names[i]));
 			tags[i].body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
 			tags[i].set('body.collideWorldBounds', true);
 			tags[i].set('body.bounce.x', 1);
