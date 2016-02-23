@@ -87,69 +87,69 @@ var Game = {
 		console.log("physiced the sprites (is that a word?)");
 
 		doctype.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		doctype.set('body.collideWorldBounds', true);
-		doctype.set('body.bounce.x', 1);
-		doctype.set('body.bounce.y', 1);
+		doctype.body.collideWorldBounds = true;
+		doctype.body.bounce.x = 1;
+		doctype.body.bounce.y = 1;
 
 		html.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		html.set('body.collideWorldBounds', true);
-		html.set('body.bounce.x', 1);
-		html.set('body.bounce.y', 1);
+		html.body.collideWorldBounds = true;
+		html.body.bounce.x = 1;
+		html.body.bounce.y = 1;
 
 		head.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		head.set('body.collideWorldBounds', true);
-		head.set('body.bounce.x', 1);
-		head.set('body.bounce.y', 1);
+		head.body.collideWorldBounds = true;
+		head.body.bounce.x = 1;
+		head.body.bounce.y = 1;
 
 		title.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		title.set('body.collideWorldBounds', true);
-		title.set('body.bounce.x', 1);
-		title.set('body.bounce.y', 1);
+		title.body.collideWorldBounds = true;
+		title.body.bounce.x = 1;
+		title.body.bounce.y = 1;
 
 		html_tag_game.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		html_tag_game.set('body.collideWorldBounds', true);
-		html_tag_game.set('body.bounce.x', 1);
-		html_tag_game.set('body.bounce.y', 1);
+		html_tag_game.body.collideWorldBounds = true;
+		html_tag_game.body.bounce.x = 1;
+		html_tag_game.body.bounce.y = 1;
 
 		slash_title.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		slash_title.set('body.collideWorldBounds', true);
-		slash_title.set('body.bounce.x', 1);
-		slash_title.set('body.bounce.y', 1);
+		slash_title.body.collideWorldBounds = true;
+		slash_title.body.bounce.x = 1;
+		slash_title.body.bounce.y = 1;
 
 		slash_head.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		slash_head.set('body.collideWorldBounds', true);
-		slash_head.set('body.bounce.x', 1);
-		slash_head.set('body.bounce.y', 1);
+		slash_head.body.collideWorldBounds = true;
+		slash_head.body.bounce.x = 1;
+		slash_head.body.bounce.y = 1;
 
 		bodyt.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		bodyt.set('body.collideWorldBounds', true);
-		bodyt.set('body.bounce.x', 1);
-		bodyt.set('body.bounce.y', 1);
+		bodyt.body.collideWorldBounds = true;
+		bodyt.body.bounce.x = 1;
+		bodyt.body.bounce.y = 1;
 
 		p.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		p.set('body.collideWorldBounds', true);
-		p.set('body.bounce.x', 1);
-		p.set('body.bounce.y', 1);
+		p.body.collideWorldBounds = true;
+		p.body.bounce.x = 1;
+		p.body.bounce.y = 1;
 
 		congratulations.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		congratulations.set('body.collideWorldBounds', true);
-		congratulations.set('body.bounce.x', 1);
-		congratulations.set('body.bounce.y', 1);
+		congratulations.body.collideWorldBounds = true;
+		congratulations.body.bounce.x = 1;
+		congratulations.body.bounce.y = 1;
 
 		slash_p.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		slash_p.set('body.collideWorldBounds', true);
-		slash_p.set('body.bounce.x', 1);
-		slash_p.set('body.bounce.y', 1);
+		slash_p.body.collideWorldBounds = true;
+		slash_p.body.bounce.x = 1;
+		slash_p.body.bounce.y = 1;
 
 		slash_body.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		slash_body.set('body.collideWorldBounds', true);
-		slash_body.set('body.bounce.x', 1);
-		slash_body.set('body.bounce.y', 1);
+		slash_body.body.collideWorldBounds = true;
+		slash_body.body.bounce.x = 1;
+		slash_body.body.bounce.y = 1;
 
 		slash_html.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		slash_html.set('body.collideWorldBounds', true);
-		slash_html.set('body.bounce.x', 1);
-		slash_html.set('body.bounce.y', 1);
+		slash_html.body.collideWorldBounds = true;
+		slash_html.body.bounce.x = 1;
+		slash_html.body.bounce.y = 1;
 
 		console.log("set velocities and other such useless things");
 
@@ -158,9 +158,9 @@ var Game = {
 		{
 			tags.push(game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), tag_names[i]));
 			s.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-			tags[i].set('body.collideWorldBounds', true);
-			tags[i].set('body.bounce.x', 1);
-			tags[i].set('body.bounce.y', 1);
+			tags[i].body.collideWorldBounds = true;
+			tags[i].body.bounce.x = 1;
+			tags[i].body.bounce.y = 1;
 		}
 		*/
 
