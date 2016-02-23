@@ -1,5 +1,5 @@
 
-var player, platforms, cursors, jumpButton, count, lasers, fireButton, laserTime, laser, tag_names, current_tag, tags, doctype, html, head, title, html_tag_game, slash_title, slash_head, body, p, congratulations, slash_p, slash_body, slash_html;
+var player, platforms, cursors, jumpButton, count, lasers, fireButton, laserTime, laser, tag_names, current_tag, tags, doctype, html, head, title, html_tag_game, slash_title, slash_head, bodyt, p, congratulations, slash_p, slash_body, slash_html;
 
 
 var Game = {
@@ -19,7 +19,7 @@ var Game = {
 		game.load.image('html_tag_game', 'images/html_tag_game.png');
 		game.load.image('slash_title', 'images/slash_title.png');
 		game.load.image('slash_head', 'images/slash_head.png');
-		game.load.image('body', 'images/body.png');
+		game.load.image('bodyt', 'images/body.png');
 		game.load.image('p', 'images/p.png');
 		game.load.image('congratulations', 'images/congratulations.png');
 		game.load.image('slash_p', 'images/slash_p.png');
@@ -28,7 +28,7 @@ var Game = {
 
 		count = 100;
 		laserTime = 0;
-		tag_names = ['doctype', 'html', 'head', 'title', 'html_tag_game', 'slash_title', 'slash_head', 'body', 'p', 'congratulations', 'slash_p', 'slash_body', 'slash_html'];
+		tag_names = ['doctype', 'html', 'head', 'title', 'html_tag_game', 'slash_title', 'slash_head', 'bodyt', 'p', 'congratulations', 'slash_p', 'slash_body', 'slash_html'];
 		current_tag = 0;
 		tags = new Array();
 
@@ -46,7 +46,7 @@ var Game = {
 		html_tag_game = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'html_tag_game');
 		slash_title = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_title');
 		slash_head = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_head');
-		body = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'body');
+		bodyt = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'bodyt');
 		p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'p');
 		congratulations = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'congratulations');
 		slash_p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_p');
@@ -59,7 +59,7 @@ var Game = {
 		game.physics.arcade.enable(html_tag_game);
 		game.physics.arcade.enable(slash_title);
 		game.physics.arcade.enable(slash_head);
-		game.physics.arcade.enable(body);
+		game.physics.arcade.enable(bodyt);
 		game.physics.arcade.enable(p);
 		game.physics.arcade.enable(congratulations);
 		game.physics.arcade.enable(slash_p);
@@ -101,10 +101,10 @@ var Game = {
 		slash_head.set('body.bounce.x', 1);
 		slash_head.set('body.bounce.y', 1);
 
-		body.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
-		body.set('body.collideWorldBounds', true);
-		body.set('body.bounce.x', 1);
-		body.set('body.bounce.y', 1);
+		bodyt.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		bodyt.set('body.collideWorldBounds', true);
+		bodyt.set('body.bounce.x', 1);
+		bodyt.set('body.bounce.y', 1);
 
 		p.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
 		p.set('body.collideWorldBounds', true);
@@ -336,7 +336,7 @@ var Game = {
 		game.physics.arcade.collide(lasers, html_tag_game, this.collisionHandler4);
 		game.physics.arcade.collide(lasers, slash_title, this.collisionHandler5);
 		game.physics.arcade.collide(lasers, slash_head, this.collisionHandler6);
-		game.physics.arcade.collide(lasers, body, this.collisionHandler7);
+		game.physics.arcade.collide(lasers, bodyt, this.collisionHandler7);
 		game.physics.arcade.collide(lasers, p, this.collisionHandler8);
 		game.physics.arcade.collide(lasers, congratulations, this.collisionHandler9);
 		game.physics.arcade.collide(lasers, slash_p, this.collisionHandler10);
