@@ -306,7 +306,7 @@ var Game = {
 		{
 			tag.kill();
 			current_tag++;
-			game.switchState('Game_Over');
+			game.state.start('Game_Over');
 		}
 		laser.kill();
 	},
