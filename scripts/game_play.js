@@ -193,7 +193,7 @@ var Game = {
 
 	},
 
-	collisionHandler0 : function(laser, tag) {
+	collisionHandler0 : function(tag, laser) {
 		if(current_tag == 0)
 		{
 			tag.kill();
@@ -202,7 +202,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler1 : function(laser, tag) {
+	collisionHandler1 : function(tag, laser) {
 		if(current_tag == 1)
 		{
 			tag.kill();
@@ -211,7 +211,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler2 : function(laser, tag) {
+	collisionHandler2 : function(tag, laser) {
 		if(current_tag == 2)
 		{
 			tag.kill();
@@ -220,7 +220,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler3 : function(laser, tag) {
+	collisionHandler3 : function(tag, laser) {
 		if(current_tag == 3)
 		{
 			tag.kill();
@@ -229,7 +229,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler4 : function(laser, tag) {
+	collisionHandler4 : function(tag, laser) {
 		if(current_tag == 4)
 		{
 			tag.kill();
@@ -238,7 +238,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler5 : function(laser, tag) {
+	collisionHandler5 : function(tag, laser) {
 		if(current_tag == 5)
 		{
 			tag.kill();
@@ -247,7 +247,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler6 : function(laser, tag) {
+	collisionHandler6 : function(tag, laser) {
 		if(current_tag == 6)
 		{
 			tag.kill();
@@ -256,7 +256,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler7 : function(laser, tag) {
+	collisionHandler7 : function(tag, laser) {
 		if(current_tag == 7)
 		{
 			tag.kill();
@@ -265,7 +265,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler8 : function(laser, tag) {
+	collisionHandler8 : function(tag, laser) {
 		if(current_tag == 8)
 		{
 			tag.kill();
@@ -274,7 +274,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler9 : function(laser, tag) {
+	collisionHandler9 : function(tag, laser) {
 		if(current_tag == 9)
 		{
 			tag.kill();
@@ -283,7 +283,7 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler10 : function(laser, tag) {
+	collisionHandler10 : function(tag, laser) {
 		if(current_tag == 10)
 		{
 			tag.kill();
@@ -292,23 +292,23 @@ var Game = {
 		laser.kill();
 	},
 
-	collisionHandler11 : function(laser, tag) {
+	collisionHandler11 : function(tag, laser) {
 		if(current_tag ==11)
 		{
-			laser.kill();
+			tag.kill();
 			current_tag++;
 		}
-		tag.kill();
+		laser.kill();
 	},
 
-	collisionHandler12 : function(laser, tag) {
+	collisionHandler12 : function(tag, laser) {
 		if(current_tag == 12)
 		{
-			laser.kill();
+			tag.kill();
 			current_tag++;
 			//this.state.start('Game_Over');
 		}
-		tag.kill();
+		laser.kill();
 	},
 
 /*
