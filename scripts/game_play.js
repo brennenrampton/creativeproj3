@@ -295,20 +295,20 @@ var Game = {
 	collisionHandler11 : function(laser, tag) {
 		if(current_tag ==11)
 		{
-			tag.kill();
+			laser.kill();
 			current_tag++;
 		}
-		laser.kill();
+		tag.kill();
 	},
 
 	collisionHandler12 : function(laser, tag) {
 		if(current_tag == 12)
 		{
-			tag.kill();
+			laser.kill();
 			current_tag++;
-			this.state.start('Game_Over');
+			//this.state.start('Game_Over');
 		}
-		laser.kill();
+		tag.kill();
 	},
 
 /*
