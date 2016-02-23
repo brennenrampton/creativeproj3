@@ -357,19 +357,19 @@ var Game = {
 		player.body.velocity.x = 0;
 		player.body.velocity.y = 0;
 
-		game.physics.arcade.collide(lasers, doctype, this.collisionHandler0);
-		game.physics.arcade.collide(lasers, html, this.collisionHandler1);
-		game.physics.arcade.collide(lasers, head, this.collisionHandler2);
-		game.physics.arcade.collide(lasers, title, this.collisionHandler3);
-		game.physics.arcade.collide(lasers, html_tag_game, this.collisionHandler4);
-		game.physics.arcade.collide(lasers, slash_title, this.collisionHandler5);
-		game.physics.arcade.collide(lasers, slash_head, this.collisionHandler6);
-		game.physics.arcade.collide(lasers, bodyt, this.collisionHandler7);
-		game.physics.arcade.collide(lasers, p, this.collisionHandler8);
-		game.physics.arcade.collide(lasers, congratulations, this.collisionHandler9);
-		game.physics.arcade.collide(lasers, slash_p, this.collisionHandler10);
-		game.physics.arcade.collide(lasers, slash_body, this.collisionHandler11);
-		game.physics.arcade.collide(lasers, slash_html, this.collisionHandler12);
+		game.physics.arcade.overlap(lasers, doctype, this.collisionHandler0);
+		game.physics.arcade.overlap(lasers, html, this.collisionHandler1);
+		game.physics.arcade.overlap(lasers, head, this.collisionHandler2);
+		game.physics.arcade.overlap(lasers, title, this.collisionHandler3);
+		game.physics.arcade.overlap(lasers, html_tag_game, this.collisionHandler4);
+		game.physics.arcade.overlap(lasers, slash_title, this.collisionHandler5);
+		game.physics.arcade.overlap(lasers, slash_head, this.collisionHandler6);
+		game.physics.arcade.overlap(lasers, bodyt, this.collisionHandler7);
+		game.physics.arcade.overlap(lasers, p, this.collisionHandler8);
+		game.physics.arcade.overlap(lasers, congratulations, this.collisionHandler9);
+		game.physics.arcade.overlap(lasers, slash_p, this.collisionHandler10);
+		game.physics.arcade.overlap(lasers, slash_body, this.collisionHandler11);
+		game.physics.arcade.overlap(lasers, slash_html, this.collisionHandler12);
 
 
 		if (cursors.left.isDown) {
