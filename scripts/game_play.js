@@ -26,6 +26,8 @@ var Game = {
 		game.load.image('slash_body', 'images/slash_body.png');
 		game.load.image('slash_html', 'images/slash_html.png');
 
+		console.log("loaded images");
+
 		count = 100;
 		laserTime = 0;
 		tag_names = ['doctype', 'html', 'head', 'title', 'html_tag_game', 'slash_title', 'slash_head', 'bodyt', 'p', 'congratulations', 'slash_p', 'slash_body', 'slash_html'];
@@ -52,6 +54,8 @@ var Game = {
 		slash_p = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_p');
 		slash_html = game.add.sprite(game.rnd.integerInRange(0, 600), game.rnd.integerInRange(0, 450), 'slash_html');
 
+		console.log("initialized sprites");
+
 		game.physics.arcade.enable(doctype);
 		game.physics.arcade.enable(html);
 		game.physics.arcade.enable(head);
@@ -65,6 +69,8 @@ var Game = {
 		game.physics.arcade.enable(slash_p);
 		game.physics.arcade.enable(slash_body);
 		game.physics.arcade.enable(slash_html);
+
+		console.log("physiced the sprites (is that a word?)");
 
 		doctype.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
 		doctype.set('body.collideWorldBounds', true);
@@ -130,6 +136,8 @@ var Game = {
 		slash_html.set('body.collideWorldBounds', true);
 		slash_html.set('body.bounce.x', 1);
 		slash_html.set('body.bounce.y', 1);
+
+		console.log("set velocities and other such useless things");
 
 
 		/*for(var i = 0; i < tag_names.length; i++)
