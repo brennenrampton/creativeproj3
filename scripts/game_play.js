@@ -93,7 +93,7 @@ var Game = {
 
 		console.log("DID IT FIND A BODY TO VELOCITY SET?");
 
-		html.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
+		html.body.velocity.set(game.rnd.integerInRange(-200, 200), game.rnd.integerInRange(-200, 200));
 		html.body.collideWorldBounds = true;
 		html.body.bounce.x = 1;
 		html.body.bounce.y = 1;
